@@ -6,6 +6,7 @@ WORKDIR /app
 
 
 COPY . . 
+COPY start.sh /start.sh
 COPY nginx.conf /etc/nginx/conf.d/virtual.conf
 
 # Copy all files to the working directory
