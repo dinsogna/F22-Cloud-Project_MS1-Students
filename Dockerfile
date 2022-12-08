@@ -14,7 +14,6 @@ RUN amazon-linux-extras install nginx1
 # Set the working directory in the container
 WORKDIR /app
 
-RUN apk add gcc libc-dev libffi-dev
 RUN pip3 install --upgrade setuptools wheel
 
 # copy requirements.txt and install
