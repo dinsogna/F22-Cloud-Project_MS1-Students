@@ -17,7 +17,7 @@ WORKDIR /app
 
 # copy requirements.txt and install
 COPY requirements.txt requirements.txt
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
 # Copy Flask application code
 COPY src/ src/ 
