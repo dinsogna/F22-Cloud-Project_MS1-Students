@@ -3,10 +3,10 @@ Microservice 1 - Students
 
 
 Endpoints: 
-/api/students/<uni> 
+/api/candidates/<id> 
 Response:  
 `{  
-  "cuid": "randomstring",
+  "id": "randomstring",
   "first_name": "John",   
   "middle_name": "Jay",    
   "last_name": "Doe",    
