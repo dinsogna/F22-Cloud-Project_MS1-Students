@@ -1,5 +1,5 @@
 # F22-Cloud-Project_MS1-Students
-Microservice 1 - Students
+Microservice 1 - Candidates
 
 Schema for table Candidates:
 
