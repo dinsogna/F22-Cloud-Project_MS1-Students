@@ -10,6 +10,8 @@ import requests
 
 # Create the Flask application object.
 app = Flask(__name__)
+login_manager = LoginManager()
+login_manager.init_app(app)
 app.secret_key = os.environ.get('secret_key')
 CORS(app)
 
@@ -21,7 +23,7 @@ GOOGLE_DISCOVERY_URL = (
 client = WebApplicationClient(GOOGLE_CLIENT_ID)
 os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
 
-@app.get("/")
+@app.get("/login_test")
 def index(): 
     if current_user.is_authenticated:
         return "Welcome!"
