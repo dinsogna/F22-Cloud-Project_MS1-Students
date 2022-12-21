@@ -14,6 +14,7 @@ RUN amazon-linux-extras install nginx1
 # Set the working directory in the container
 WORKDIR /app
 
+RUN pip3 install --upgrade pip
 RUN pip3 install --upgrade setuptools wheel
 
 # copy requirements.txt and install
