@@ -28,6 +28,7 @@ COPY nginx.conf /etc/nginx/conf.d/virtual.conf
 
 
 EXPOSE 80
+EXPOSE 443
 
 # Specify the command to run on container start
 RUN chmod +x /start.sh
