@@ -31,7 +31,7 @@ class CandidateResource:
     @staticmethod
     def get_by_key(key):
 
-        sql = "SELECT * FROM cloud_project_db.candidates where id=%s"
+        sql = "SELECT * FROM cloud_project_db.candidates where candidate_id=%s"
         conn = CandidateResource._get_connection()
         cur = conn.cursor()
         res = cur.execute(sql, args=key)
