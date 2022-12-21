@@ -49,7 +49,7 @@ def get_all_students():
     result = CandidateResource.get_all()
 
     if result:
-        rsp = Response(json.dumps(result), status=200, content_type="application.json")
+        rsp = Response(json.dumps(result, default = str), status=200, content_type="application.json")
     else:
         rsp = Response("NOT FOUND", status=404, content_type="text/plain")
 
@@ -61,7 +61,7 @@ def get_student_by_uni(id):
     result = CandidateResource.get_by_key(id)
 
     if result:
-        rsp = Response(json.dumps(result), status=200, content_type="application.json")
+        rsp = Response(json.dumps(result, default = str), status=200, content_type="application.json")
     else:
         rsp = Response("NOT FOUND", status=404, content_type="text/plain")
 
