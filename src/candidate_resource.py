@@ -40,12 +40,12 @@ class CandidateResource:
         return result
     
     @staticmethod
-    def get_all():  
+    def get_all(startat, perpage):  
 
-        sql = "SELECT * FROM cloud_project_db.candidates;"
+        sql = "SELECT * FROM cloud_project_db.candidates limit %s, %s;"
         conn = CandidateResource._get_connection()
         cur = conn.cursor()
-        res = cur.execute(sql)  
+        res = cur.execute(sql, args=(startat, perpage))  
         result = cur.fetchall()
 
         return result

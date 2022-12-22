@@ -45,8 +45,13 @@ def get_health():
 
 @app.route("/api/candidates/", methods=["GET"])
 def get_all_students():
+    page = int(request.args.get('page'))
+    if not page: 
+        page = 1 
 
-    result = CandidateResource.get_all()
+    perpage=10
+    startat=page*perpage
+    result = CandidateResource.get_all(startat, perpage)
 
     if result:
         rsp = Response(json.dumps(result, default = str), status=200, content_type="application/json")
